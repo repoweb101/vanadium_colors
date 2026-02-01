@@ -21,7 +21,7 @@
 
         <p class="text-xs sm:text-sm text-text-light">Check out our GitHub repo here! &#8658; </p>
 
-        <a href="#"><img src="../../assets/github_logo_dark_mode.svg" alt="image of Vanadium Colors logo" width="40" height="40"></a>
+        <a href="https://github.com/repoweb101/vanadium_colors"><img src="../../assets/github_logo_dark_mode.svg" alt="image of Vanadium Colors logo" width="40" height="40"></a>
 
     </div>
 
