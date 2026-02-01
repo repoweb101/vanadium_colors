@@ -1,0 +1,41 @@
+<svg width="512" height="512" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="metal-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+        <stop offset="20%" style="stop-color:#FBF5B7;stop-opacity:1" />
+        <stop offset="50%" style="stop-color:#B8860B;stop-opacity:1" />
+        <stop offset="80%" style="stop-color:#FBF5B7;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#996515;stop-opacity:1" />
+        </linearGradient>
+
+        <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
+        <feOffset dx="1" dy="2" result="offsetblur" />
+        <feComponentTransfer>
+            <feFuncA type="linear" slope="0.4" />
+        </feComponentTransfer>
+        <feMerge>
+            <feMergeNode />
+            <feMergeNode in="SourceGraphic" />
+        </feMerge>
+        </filter>
+    </defs>
+
+    <g filter="url(#shadow)">
+        <path fill="url(#metal-gold)" d="
+        M 65,75 
+        C 60,70 75,65 85,68 
+        C 95,70 100,80 95,95 
+        L 85,135 
+        C 82,145 85,150 90,150 
+        C 100,150 120,110 145,65 
+        C 150,55 160,55 155,68 
+        C 145,95 125,145 110,165 
+        C 100,180 85,175 75,165 
+        C 65,155 65,135 70,115 
+        L 80,85 
+        C 82,80 75,80 70,82 
+        C 65,85 62,82 65,75 
+        Z" />
+    </g>
+</svg>
