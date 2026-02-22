@@ -71,18 +71,22 @@
                             v-bind:onclick_function="color_manipulation_store.addNewColor"
                         />
 
-                    <color_modification
-                        v-if="color_manipulation_store.hsl_color.length > 1"
-                        v-on:manual-change="$emit('manual-change', $event)"
-                        v-on:delete-color="$emit('delete-color', $event)"
-                        v-on:reorder-colors="$emit('reorder-colors', $event)"
-                    />
+                        <color_modification
+                            v-if="color_manipulation_store.hsl_color.length > 1"
+                            v-on:manual-change="$emit('manual-change', $event)"
+                            v-on:delete-color="$emit('delete-color', $event)"
+                            v-on:reorder-colors="$emit('reorder-colors', $event)"
+                        />
 
                     </div>
 
                     <color_accesibility_lab
                         v-if="active_tab === 'WCAG 2.1 Lab'"
                         v-bind:color_palette="color_manipulation_store.hsl_color"
+                    />
+
+                    <color_selection_from_image
+                        v-if="active_tab === 'image picker'"
                     />
 
                 </div>
@@ -146,13 +150,14 @@ import color_accesibility_lab from './components/sections/color_accesibility_lab
 import manual_color_generator from './components/sections/manual_color_generator.vue';
 import color_modification from './components/sections/color_modification.vue';
 import footer_component from './components/sections/footer.vue';
+import color_selection_from_image from './components/sections/color_selection_from_image.vue';
 import { useColorManipulationStore } from './stores/use_color_manipulation_store';
 import { usePaletteGeneratorStore } from './stores/use_palette_generator_store';
 
 const color_manipulation_store = useColorManipulationStore();
 const palette_generator = usePaletteGeneratorStore();
 const active_tab = ref('generate');
-const tabs = ['generate', 'WCAG 2.1 Lab'];
+const tabs = ['generate', 'WCAG 2.1 Lab', 'image picker'];
 
 const palette_generators = [
     {

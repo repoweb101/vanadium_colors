@@ -60,6 +60,9 @@
 <script setup>
 import { ref } from 'vue';
 
+const active_tab = ref('generate');
+const tabs = ['generate', 'WCAG 2.1 Lab', 'image picker'];
+
 const elements = ref([
     {
         label: 'Home',
